@@ -1,4 +1,4 @@
-# FluSight ILI Sandbox Hub Template
+# SISMID 2025 ILI Forecasting Sandbox
 
 A template of a Sandbox hub of forecasts based on the original [FluSight Challenge](https://github.com/cdcepi/FluSight-forecasts) run by the CDC. All data and the repository structure have been formatted according to [hubverse](https://hubverse.io/) standards.
 
