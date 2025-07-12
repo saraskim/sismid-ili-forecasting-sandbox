@@ -20,11 +20,11 @@ ili_time_series <- ili_target_data_raw |>
   select("issue", "region", "epiweek", "wili") |>
   rename(as_of = "issue", locations = "region", observation = "wili") |>
   mutate(
-    date = epiweek + 6, ## epiweek is start of week, target_end_date is end
+    date = epiweek + 6, ## epiweek is start of week, date is end
     target = "ili perc"
   ) |>
   left_join(loc_df) |>
-  select("location", "target_end_date", "target", "observation")
+  select("location", "date", "target", "observation")
 
 write.csv(ili_time_series, "target-data/time-series.csv", row.names = FALSE)
 
