@@ -108,6 +108,10 @@
             "additionalProperties": false,
             "required": ["data_inputs", "methods"]
         },
+        "designated_model": {
+            "description": "Team-specified indicator for whether the model should be eligible for inclusion in a Hub ensemble and public visualization. A team may designate up to two models.",
+            "type": "boolean"
+        },
         "ensemble_of_hub_models": {
             "description": "Indicator for whether this model is an ensemble of other Hub models",
             "type": "boolean"
@@ -116,6 +120,7 @@
     "additionalProperties": true,
     "required": [
         "team_abbr",
-        "model_abbr"
+        "model_abbr",
+        "designated_model"
     ]
 }
