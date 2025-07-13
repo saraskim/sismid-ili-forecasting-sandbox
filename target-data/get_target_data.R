@@ -30,12 +30,12 @@ write.csv(ili_time_series, "target-data/time-series.csv", row.names = FALSE)
 
 # time series format
 ili_oracle_output <- ili_time_series |>
-  rename(origin_date = "date", oracle_value = "observation") |>
+  rename(target_end_date = date,
+         oracle_value = value) |>
   mutate(
     output_type = "quantile",
     output_type_id = NA,
     .before = "oracle_value"
-  ) |>
-  select(-"as_of")
+  )
 
 write.csv(ili_oracle_output, "target-data/oracle-output.csv", row.names = FALSE)
