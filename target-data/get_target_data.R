@@ -18,20 +18,19 @@ write.csv(ili_target_data_raw, "target-data/target-data-raw.csv", row.names = FA
 # time series format
 ili_time_series <- ili_target_data_raw |>
   select("issue", "region", "epiweek", "wili") |>
-  rename(as_of = "issue", locations = "region", value = "wili") |>
+  rename(as_of = "issue", locations = "region", observation = "wili") |>
   mutate(
-    date = epiweek + 6, ## epiweek is start of week, date is end
+    target_end_date = epiweek + 6, ## epiweek is start of week, target_end_date is end
     target = "ili perc"
   ) |>
   left_join(loc_df) |>
-  select("location", "date", "target", "value")
+  select("location", "target_end_date", "target", "observation")
 
 write.csv(ili_time_series, "target-data/time-series.csv", row.names = FALSE)
 
 # time series format
 ili_oracle_output <- ili_time_series |>
-  rename(target_end_date = date,
-         oracle_value = value) |>
+  rename(oracle_value = observation) |>
   mutate(
     output_type = "quantile",
     output_type_id = NA,
