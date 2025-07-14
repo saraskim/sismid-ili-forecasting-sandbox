@@ -1,4 +1,4 @@
-"location","date","target","value"
+"location","target_end_date","target","observation"
 "US National",2015-10-24,"ili perc",1.3711
 "US National",2015-10-31,"ili perc",1.39171
 "US National",2015-11-07,"ili perc",1.43712
