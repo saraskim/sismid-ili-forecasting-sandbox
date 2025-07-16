@@ -8,5 +8,7 @@ model_contributors: [
   }
 ]
 model_details:
+  data_inputs: "NA"
+  methods: "see methods_long"
   methods_long: "This model is a weighted ensemble between three component models. A historical average model, a historical average model incorporating information on influenza A subtype prevalence, and the Protea Springbok model. Models are combined using monthly target-type weights, and the weighting scheme was chosen using leave-one-season-out cross validation."
 designated_model: true
