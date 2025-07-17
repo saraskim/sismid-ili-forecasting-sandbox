@@ -6,7 +6,9 @@ quantile_levels <- c(0.01, 0.025, seq(0.05, 0.95, 0.05), 0.975, 0.99)
 bucket_name <- "uscdc-flusight-hub-v1"
 hub_bucket <- s3_bucket(bucket_name)
 hub_con <- hubData::connect_hub(hub_bucket, file_format = "parquet", skip_checks = TRUE)
-model_names <- c("hist-avg", "delphi-epicast")
+model_names <- c("hist-avg", "delphi-epicast",
+                 "kot-kot", "protea-cheetah",
+                 "neu-gleam", "lanl-dbmplus")
 step_ahead_model_output <- hub_con |>
   dplyr::filter(
     model_id %in% model_names,
