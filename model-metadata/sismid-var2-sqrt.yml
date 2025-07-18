@@ -1,7 +1,0 @@
-team_abbr: "sismid"
-model_abbr: "var2-sqrt"
-model_name: "Vector Autoregression with Square Root Transform"
-designated_model: true
-methods: "VAR(2) model with square root transformation. Captures cross-regional dependencies in flu transmission. All 11 time series (10 HHS regions + national) modeled jointly. Square root transformation stabilizes variance. Two-week lag structure (AR2) captures autocorrelation. Bootstrap method used for prediction intervals."
-ensemble_of_models: false
-ensemble_of_hub_models: false
