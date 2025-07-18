@@ -1,0 +1,7 @@
+team_abbr: "sismid"
+model_abbr: "var1-optimal"
+model_name: "Optimal Seasonal Vector Autoregression"
+designated_model: true
+methods: "VAR(1) model with square root transformation and annual seasonality (period=52). Optimized through extensive model comparison. Captures cross-regional dependencies with minimal lag structure, relying on seasonal component for temporal patterns. All 11 time series (10 HHS regions + national) modeled jointly. Square root transformation stabilizes variance. One-week lag structure (AR1) with annual seasonality captures yearly flu patterns efficiently. Bootstrap method used for prediction intervals. AICc: -49,358, substantially better than VAR(2) alternatives."
+ensemble_of_models: false
+ensemble_of_hub_models: false
